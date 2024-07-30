@@ -54,7 +54,10 @@ body {
     .menu-toggle {
         display: block;
     }
-  
+  .foto_j{
+    width: 80%;
+    height: 80%;
+  }
     nav ul {
         display: none;
         flex-direction: column;
