@@ -16,21 +16,62 @@
             id="menu-toggle">
                 ☰ 
             </div>
-            <ul id="menu">
+            <ul id="menu"><!-- semantica de estrutura de codigo de seção de navegação -->
                 <li><a href="">Home</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servico">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#login">Login</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
+    <main>        
+         <!-- o main é o conteudo principal do do doc, só pode ter 1 um main 
+         no codigo, os outros podem ser article ou section -->
+         <section>
             <h2>Bem-vindo!</h2>
+            <h3>Seguinte....</h3>
             <p>Este é um exemplo de uma página web responsiva com um menu sanduíche.
                 Redimensione a janela para ver como o layout se ajusta a diferentes tamanhos de tela.</p>
+            <p>Este é um exemplo de uma página web responsiva. Redimensione a janela para ver como o layout se ajusta a diferentes tamanhos de tela.</p>
         </section>
-        <section>
+                <!-- Conteúdo principal da página -->
+                <article>
+                    <h2>Artigo Principal</h2>
+                    <p>Texto do artigo...</p>
+                </article>
+        
+                <section id="home">
+                    <h2>Outra Seção Importante</h2>
+                    <p>Conteúdo da outra seção...</p>
+                </section>
+                <section id="sobre">
+                    <header>
+                        <h2>sobre</h2>
+                    </header>
+                    <article>
+                        <h3>sobre 1</h3>
+                        <p>Descrição do primeiro sobre.</p>
+                    </article>
+                    <article>
+                        <h3>sobre 2</h3>
+                        <p>Descrição do segundo sobre.</p>
+                    </article>
+                </section>
+                <section id="servicos">
+                    <header>
+                        <h2>Nossos Serviços</h2>
+                    </header>
+                    <p>Aqui você encontra informações sobre os serviços que oferecemos.</p>
+                </section>
+
+                <section id="contato">
+                    <header>
+                        <h2>Contato</h2>
+                    </header>
+                    <p>Entre em contato conosco através do formulário abaixo.</p>
+                </section>
+        <section id="login">
             <form action="login.php" method="post">
                 <p>ENTRAR</p> 
                 <label for="login">Login: </label><input type="text" name="login"><br>
@@ -43,7 +84,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Meu Site Responsivo</p>
+        <p>Todos os direitos reservados a <a href="www.proflobo.com.br">Prof LOBO</a> 2024 Meu Site Responsivo</p>
     </footer>
     <script src="js/menu.js"></script>
 </body>
