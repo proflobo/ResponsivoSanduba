@@ -24,7 +24,7 @@ $conn->query($sql);
 // Register user
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login = $_POST['login'];
-    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+    $senha =  $_POST['senha'];//password_hash($_POST['senha'], PASSWORD_DEFAULT); // fazendo senha ser criptografada
 
     $sql = "INSERT INTO users (login, senha) VALUES ('$login', '$senha')";
     $conn->query($sql);
