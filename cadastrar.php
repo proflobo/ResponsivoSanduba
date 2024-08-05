@@ -1,9 +1,9 @@
 <?php
 // Create a connection to the database
-$servername = "localhost";
-$username = "root";
+$servername = "localhost"; //LOBODELL\SQLEXPRESS
+$username = "root";  //LOBODELL\mathe
 $password = "";
-$dbname = "db_lobo";
+$dbname = "db_lobo"; //Locadora
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -29,7 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO users (login, senha) VALUES ('$login', '$senha')";
     $conn->query($sql);
 
-    echo "Cadastro realizado com sucesso!";
+    echo "Cadastro realizado com sucesso! redirecionamento...Login"; 
+    echo "<!-- Redireciona para uma URL específica em html -->
+<meta http-equiv='refresh' content='5; url=http://localhost/ResponsivoSanduba/#login'>"; //redirecionamento em segundos
+/* Redireciona para uma URL específica em php
+header("Location: https://www.exemplo.com");
+exit;*/
 } else {
     ?>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
