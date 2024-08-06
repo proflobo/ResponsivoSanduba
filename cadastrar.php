@@ -2,7 +2,7 @@
 // Create a connection to the database
 $servername = "localhost"; //LOBODELL\SQLEXPRESS
 $username = "root";  //LOBODELL\mathe
-$password = "";
+$password = "1234";
 $dbname = "db_lobo"; //Locadora
 
 $conn = new mysqli($servername, $username, $password, $dbname);

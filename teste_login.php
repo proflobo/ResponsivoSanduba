@@ -1,9 +1,9 @@
 <?php
 // Configurações do banco de dados
-$host = 'localhost';
-$database = 'db_lobo';
-$username = 'root';
-$password = '';
+$host = 'localhost'; //nome do pc ou ip que tá o banco de dados
+$database = 'db_lobo'; //nome do banco de dados
+$username = 'root'; //usuario de acesso
+$password = '1234'; //senha do usuario
 
 // Conexão com o banco de dados
 $conn = new mysqli($host, $username, $password, $database);
