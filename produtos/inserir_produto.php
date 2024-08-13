@@ -15,21 +15,31 @@ if (isset($_POST["inserir"])) {  // Inserir produto
     $destination = 'img_produtos/' . $nome_foto;
 if (move_uploaded_file($tmp_name, $destination)) { // Mover o arquivo para a pasta imagens/produtos
     echo "Arquivo enviado com sucesso!";
-    echo "Cadastro realizado com sucesso! redirecionamento...Login"; 
-    echo "<!-- Redireciona para uma URL específica em html -->
-<meta http-equiv='refresh' content='3; url=inserir_produto.html'>";
   } else {
     echo "Erro ao enviar arquivo!";
-    echo "Cadastro realizado com sucesso! redirecionamento...Login"; 
-    echo "<!-- Redireciona para uma URL específica em html -->
-<meta http-equiv='refresh' content='3; url=inserir_produto.html'>";
   }
   // Inserir dados no banco de dados
-  $sql = "INSERT INTO produtos (nome, tipo, descricao, valor_unitario, quantidade_estoque, cor, disponivel, link_imagem, foto) VALUES ('$nome', '$tipo', '$descricao', '$valor_unitario', '$quantidade_estoque', '$cor', '$disponivel', '$link_imagem', '$nome_foto')";
+  $sql = "INSERT INTO produtos (nome, tipo, 
+  descricao, valor_unitario, quantidade_estoque,
+   cor, disponivel, link_imagem, foto) 
+  VALUES ('$nome', '$tipo', '$descricao',
+   '$valor_unitario', '$quantidade_estoque', 
+   '$cor', '$disponivel', '$link_imagem', 
+   '$nome_foto')";
   if ($conn->query($sql) === TRUE) {
     echo "Produto inserido com sucesso!";
+    echo "redirecionamento...Login"; 
+    echo "<!-- Redireciona para uma URL
+     específica em html -->
+<meta http-equiv='refresh' content='3;
+ url=inserir_produto.html'>";
   } else {
     echo "Erro ao inserir produto: " . $conn->error;
+    echo "xiii deu erro, volte para a pagina de
+     inserção"; 
+    echo "<!-- Redireciona para uma URL específica
+     em html -->
+<meta http-equiv='refresh' content='10; url=inserir_produto.html'>";
   }
 }
 ?>
