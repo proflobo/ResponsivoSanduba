@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+include('conexao.php');//chama o arquivo padrao de conexao do banco de dados
 
 // Criar tabela
 $sql = "CREATE TABLE IF NOT EXISTS users (
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     echo "Cadastro realizado com sucesso! redirecionamento...Login"; 
     echo "<!-- Redireciona para uma URL específica em html -->
-<meta http-equiv='refresh' content='3; url=http://www.proflobo.com.br'>"; //redirecionamento em segundos
+<meta http-equiv='refresh' content='3; url=index.html'>"; //redirecionamento em segundos
 /* Redireciona para uma URL específica em php header("Location: https://www.exemplo.com"); exit;*/
 } else {
     ?>

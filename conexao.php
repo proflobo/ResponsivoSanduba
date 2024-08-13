@@ -1,5 +1,5 @@
 <?php
-// Create a connection to the database
+
 $servername = "localhost"; // pelo nome LOBODELL\SQLEXPRESS ou pelo IP 127.0.0.1  192.168.0.4
 $username = "root";  //LOBODELL\mathe
 $password = "1234"; //senha do usuario

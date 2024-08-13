@@ -7,6 +7,7 @@ CREATE TABLE produtos (
   quantidade_estoque INT NOT NULL,
   cor VARCHAR(255) NOT NULL,
   disponivel TINYINT(1) NOT NULL DEFAULT 1,
-  link_imagem VARCHAR(255) NOT NULL
+  link_imagem varchar(255) NOT NULL,
+  foto varchar(250) NOT NULL
 );
 

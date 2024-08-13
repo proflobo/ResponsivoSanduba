@@ -1,4 +1,7 @@
 <?php
+// chama o cabeçalho do html basico, tudo abaixo ficaria dentro do body main
+include('abre.php');
+// Conectar ao banco de dados
 include('conexao.php');
 
 // Inserir produto
@@ -79,4 +82,6 @@ echo "  <input type='submit' name='deletar' value='Deletar'>";
 echo "</form>";
 
 $conn->close();
+// chama o rodapé do html basico, tudo acima ficaria dentro do body main e abaixo do footer
+include('fecha.php');
 ?>

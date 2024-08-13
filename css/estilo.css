@@ -37,16 +37,18 @@ body {
   
   main {
     padding: 20px;
+    min-height: 1000px;
   }
   
   footer {
     background-color: #333;
     color: white;
     text-align: center;
+    padding-top: 10%;
     padding: 10px 0;
-    position: fixed;
+    position: static;
     width: 100%;
-    bottom: 0;
+ 
   }
   
   /* Responsividade */
@@ -93,18 +95,18 @@ body {
     width: 80%; /* 80% da largura do contêiner pai */
     min-height: 20em; /* Altura mínima de 20 vezes o tamanho da fonte atual */
   }
-  .section4 {
+  .sobre {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     margin-bottom: 20px;
     padding: 20px;
   }
-  .section1 {
+  .servicos {
     width: 80%;
     min-height: 200px;
   }
   
-  .section2 {
+  .contato {
     width: 50%;
     height: 400px;
   }

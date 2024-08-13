@@ -1,4 +1,7 @@
 <?php
+// chama o cabeçalho do html basico, tudo abaixo ficaria dentro do body main
+include('abre.php');
+
 // Conectar ao banco de dados
 include('conexao.php');
 
@@ -33,6 +36,7 @@ if (isset($_POST["selecionar"])) {
 
   // Exibir as informações do produto selecionado
   echo "<h2>Informações do Produto</h2>";
+  echo "  <p>Imagem: <img width='100px' height='100px' src='imagens/produtos/" . $row['foto'] . "'></p>";
   echo "  <p>Nome: " . $row['nome'] . "</p>";
   echo "  <p>Tipo: " . $row['tipo'] . "</p>";
   echo "  <p>Descrição: " . $row['descricao'] . "</p>";
@@ -41,8 +45,13 @@ if (isset($_POST["selecionar"])) {
   echo "  <p>Cor: " . $row['cor'] . "</p>";
   echo "  <p>Disponível: " . $row['disponivel'] . "</p>";
   echo "  <p>Link para Imagem: " . $row['link_imagem'] . "</p>";
-  echo "  <p>Imagem: <img width='100px' height='100px' src='imagens/produtos/" . $row['foto'] . "'></p>";
+ 
 }
 
 $conn->close();
+
+
+
+// chama o rodapé do html basico, tudo acima ficaria dentro do body main e abaixo do footer
+include('fecha.php');
 ?>
