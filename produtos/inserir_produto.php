@@ -12,11 +12,17 @@ if (isset($_POST["inserir"])) {  // Inserir produto
     $foto = $_FILES['foto']; // Upload da imagem, crie as pastas imagens/produtos/  antes
     $nome_foto = $foto['name'];
     $tmp_name = $foto['tmp_name'];
-    $destination = 'imagens/produtos/' . $nome_foto;
+    $destination = 'img_produtos/' . $nome_foto;
 if (move_uploaded_file($tmp_name, $destination)) { // Mover o arquivo para a pasta imagens/produtos
     echo "Arquivo enviado com sucesso!";
+    echo "Cadastro realizado com sucesso! redirecionamento...Login"; 
+    echo "<!-- Redireciona para uma URL específica em html -->
+<meta http-equiv='refresh' content='3; url=inserir_produto.html'>";
   } else {
     echo "Erro ao enviar arquivo!";
+    echo "Cadastro realizado com sucesso! redirecionamento...Login"; 
+    echo "<!-- Redireciona para uma URL específica em html -->
+<meta http-equiv='refresh' content='3; url=inserir_produto.html'>";
   }
   // Inserir dados no banco de dados
   $sql = "INSERT INTO produtos (nome, tipo, descricao, valor_unitario, quantidade_estoque, cor, disponivel, link_imagem, foto) VALUES ('$nome', '$tipo', '$descricao', '$valor_unitario', '$quantidade_estoque', '$cor', '$disponivel', '$link_imagem', '$nome_foto')";

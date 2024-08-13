@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="prof lobo - FAKERTREE - pagina de contatos matheus lobo">
     <meta name="author" content="Matheus Lobo">
-    <title>Página Responsiva com Menu Sanduíche</title>
+    <title>MERCADO do LOBO</title>
     <!-- TEXTO AQUI Ξ ☻♥ -->
     <!-- Favicon / Trocar a URL -->
     <link rel="shortcut icon" href="imagens/ico_logo.png" />
