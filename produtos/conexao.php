@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost"; // pelo nome LOBODELL\SQLEXPRESS ou pelo IP 127.0.0.1  192.168.0.4
-$username = "root";  //LOBODELL\mathe
+$username = "u289605890_prof";  //LOBODELL\mathe
 $password = "1234"; //senha do usuario
 $dbname = "db_lobo"; // nome do teu banco de dados exempli.: bd_Locadora
 $conn = new mysqli($servername, $username, $password, $dbname);
